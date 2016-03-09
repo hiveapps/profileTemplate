@@ -1,0 +1,19 @@
+<div class="chatWrapper" ng-controller="chatCtrl">
+	
+	<div class="card text-xs-center" ng-repeat="val in messages">
+		<div class="card-block">
+			<p class="card-text">{{val.messageDescription}}</p>
+		</div>
+	</div>
+	
+</div>
+
+<footer class="chatFooter" ng-controller="chatCtrl">
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<input placeholder="Send Message..." ng-model="messageDescription" />
+
+		<button type="button" class="btn btn-primary" ng-model="sendMessageButton" ng-disabled="!messageDescription" ng-click="submitMessage(); reset()">
+			Send
+		</button>
+	</div>
+</footer>
