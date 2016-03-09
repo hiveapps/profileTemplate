@@ -3,16 +3,16 @@ var hive = angular.module('hive.controllers', []);
 
 //Totally functioning simple login
 hive.controller("LoginCtrl", function($scope, $firebaseAuth, $state){
-var users = new Firebase("https://chattemplate.firebaseio.com/");
+var users = new Firebase("https://profiletemplate.firebaseio.com/");
   
   //This is going to get and log the user status, this could be copied and/or used for the beginning framework to build
   //a functioning profile page
-  var status = new Firebase("https://chattemplate.firebaseio.com/");
+  var status = new Firebase("https://profiletemplate.firebaseio.com/");
   var authData = status.getAuth();
   
   if (authData) {
     console.log("User " + authData.uid + " is logged in with " + authData.provider);
-    $state.go('hive.chat');
+    $state.go('hive.profile');
   } else {
     console.log("User is logged out");
   }
@@ -36,7 +36,7 @@ var users = new Firebase("https://chattemplate.firebaseio.com/");
             console.log("Authenticated successfully with payload:", authData);
           }
         });
-        $state.go('hive.chat');
+        $state.go('hive.profile');
       }
     });
   };
@@ -50,7 +50,7 @@ var users = new Firebase("https://chattemplate.firebaseio.com/");
       if (error) {
         console.log("Login Failed!", error);
       } else {
-        $state.go('hive.chat');
+        $state.go('hive.profile');
       }
     });
   };
@@ -61,7 +61,7 @@ var users = new Firebase("https://chattemplate.firebaseio.com/");
   // here we will just simulate this with an isNewUser boolean
   var isNewUser = true;
   
-  var ref = new Firebase("https://chattemplate.firebaseio.com");
+  var ref = new Firebase("https://profiletemplate.firebaseio.com");
   ref.onAuth(function(authData) {
     if (authData && isNewUser) {
       // save the user's profile into the database so we can list users,
@@ -96,9 +96,9 @@ var users = new Firebase("https://chattemplate.firebaseio.com/");
 
 
 //Chats Page Controller
-hive.controller('chatCtrl',function($scope, $firebaseArray, $state, $timeout){
+hive.controller('profileCtrl',function($scope, $firebaseArray, $state, $timeout){
 	
-  var ref = new Firebase("https://chattemplate.firebaseio.com/");
+  var ref = new Firebase("https://profiletemplate.firebaseio.com/");
   var messagesRef = ref.child("messages");
   
   //This is called after the 'Send' button is pressed
@@ -119,7 +119,7 @@ hive.controller('chatCtrl',function($scope, $firebaseArray, $state, $timeout){
       $scope.reset();
 	};
   
-  var ratesRef = new Firebase('https://chattemplate.firebaseio.com/messages');
+  var ratesRef = new Firebase('https://profiletemplate.firebaseio.com/messages');
   
   ratesRef.on("value", function (snapshot) {
     $timeout(function () {

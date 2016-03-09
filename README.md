@@ -1,6 +1,6 @@
-<h1><b>Hive Chat Template</b></h1>
+<h1><b>Hive Profile Template</b></h1>
 
-<p>The Hive Chat Template is built to provide a very basic chat service that integrates firebase login and a messaging service 
+<p>The Hive Profile Template is built to provide a very basic Profile service that integrates firebase login and a messaging service 
 with custom controllers and templates.</p>
 
 <ul>
@@ -20,7 +20,7 @@ with custom controllers and templates.</p>
 <h2>Features</h2>
 <ul>
 	<li>
-		The Hive Chat Template utilizes many awesome features, including:
+		The Hive Profile Template utilizes many awesome features, including:
 	</li>
 	<ul>
 		<li>
@@ -33,7 +33,7 @@ with custom controllers and templates.</p>
 			Firebase Login
 		</li>
 		<li>
-			Fully functioning simple chat service with firebase integration
+			Fully functioning simple Profile service with firebase integration
 		</li>
 		<li>
 			Resources file structure to easily compile an app icon and splashscreen once Phonegap builds the app
@@ -88,7 +88,7 @@ The file structure goes as follows:</p>
 				
 			<li>templates</li>
 				<ul>
-					<li>chat.html</li>
+					<li>Profile.html</li>
 					<li>header.html</li>
 					<li>login.html</li>
 				</ul>
@@ -107,7 +107,7 @@ The file structure goes as follows:</p>
 
 <h2>How It Works</h2>
 
-<p>The Hive Chat Template is very simple from the user perspective but from a developer perspective we believe it gets you started
+<p>The Hive Profile Template is very simple from the user perspective but from a developer perspective we believe it gets you started
 in a great way. By integrating AngularJS with Angular UI-Router and linking all of the apps backend functionality to your own firebase
 database, we believe that this will prove to be a great starting point for you to build out your own app.</p>
 
@@ -188,7 +188,7 @@ database, we believe that this will prove to be a great starting point for you t
 									<li>controllers.js</li>
 										<ul>
 											<li>Within the controllers.js file we have a controller for the firebase login as well as a controller for
-											the chat service.</li>
+											the Profile service.</li>
 										</ul>
 									
 									<li>directives.js</li>
@@ -217,10 +217,10 @@ database, we believe that this will prove to be a great starting point for you t
 							<li>templates</li>
 								<ul>
 									
-									<li>chat.html</li>
+									<li>Profile.html</li>
 										<ul>
-											<li>The chat.html file is where we have setup all the html for the 'chat' page, this page integrates
-											AngularJS to display each new message and utilizes the chatCtrl.</li>
+											<li>The Profile.html file is where we have setup all the html for the 'Profile' page, this page integrates
+											AngularJS to display each new message and utilizes the ProfileCtrl.</li>
 										</ul>
 									
 									<li>header.html</li>

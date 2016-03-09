@@ -21,11 +21,11 @@ hive.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('hive.chat', {
-        url: "/chat",
+    .state('hive.profile', {
+        url: "/profile",
         views: {
             'content@': {
-                templateUrl: 'templates/chat.html'
+                templateUrl: 'templates/profile.html'
             }
         }
     });
